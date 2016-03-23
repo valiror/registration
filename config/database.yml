@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  encoding: unicode 
+  pool: 5 
+  database: registration_development
+  username: pguser
+  password: root
+  host: localhost
+  port: 5432
+# test:
+#   adapter: postgresql
+#   encoding: unicode  
+#   pool: 5 
+#   database: registration_test 
+#   username: root 
+#   password: exa10sept 
+#   host: localhost 
+#   port: 5432
+#  production:
+#   adapter: postgresql
+#   encoding: unicode  
+#   pool: 5 
+#   database: registration_production 
+#   username: root 
+#   password: exa10sept 
+#   host: localhost 
+#   port: 5432

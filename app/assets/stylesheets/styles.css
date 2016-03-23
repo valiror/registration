@@ -1,0 +1,7 @@
+*{margin: 0px;padding: 0px;}
+.pt100{padding-top: 100px!important;}
+.pt200{padding-top: 200px!important;}
+.login_border{border:3px solid #456123;background-color: #989456;}
+body{
+	background-color: beige;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myapplication">
+<head>
+  <title>Registration</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="row" ng-view>
+<div class="col-md-4 col-md-offset-4">
+<% if user_signed_in? %> 
+  <div style="col-md-6 col-md-offset-3">
+<center>
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  </center>
+  <center>Logged in as <strong><span style="color:#456897"><%= current_user.email %></span></strong>.</center> 
+  </div>
+<% else %>
+<div style="col-md-6 col-md-offset-3">
+<center>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  </center>
+  </div>
+<% end %>
+<center>
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       </center>
+</div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
